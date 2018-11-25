@@ -233,11 +233,11 @@ PRODUCT_PACKAGES += \
     fs_config_files
 
 # dm-verity configuration
-PRODUCT_SUPPORTS_VERITY := true
-PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
-ifeq ($(ENABLE_VENDOR_IMAGE), true)
-PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/bootdevice/by-name/vendor
-endif
+#PRODUCT_SUPPORTS_VERITY := true
+#PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
+#ifeq ($(ENABLE_VENDOR_IMAGE), true)
+#PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/bootdevice/by-name/vendor
+#endif
 
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
