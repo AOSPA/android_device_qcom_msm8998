@@ -12,7 +12,7 @@ ENABLE_VENDOR_IMAGE := true
 endif
 
 # Default A/B configuration.
-ENABLE_AB ?= true
+#ENABLE_AB ?= true
 
 # Disable QTIC until it's brought up in split system/vendor
 # configuration to avoid compilation breakage.
