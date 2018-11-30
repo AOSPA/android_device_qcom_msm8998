@@ -317,4 +317,4 @@ PRODUCT_PACKAGES += vndk_package
 
 TARGET_MOUNT_POINTS_SYMLINKS := false
 
-$(call inherit-product, build/make/target/product/product_launched_with_p.mk)
+$(call inherit-product, build/make/target/product/product_launched_with_n.mk)
