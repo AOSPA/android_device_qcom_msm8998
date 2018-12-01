@@ -98,8 +98,10 @@ WLAN_CHIPSET := qca_cld3
 
 #Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
-PRODUCT_BOOT_JARS += tcmiface
-PRODUCT_BOOT_JARS += telephony-ext
+
+# tcmiface and telephony-ext are added as boot jars in vendor/pa. Duplicating it here will cause build errors.
+#PRODUCT_BOOT_JARS += tcmiface
+#PRODUCT_BOOT_JARS += telephony-ext
 
 PRODUCT_PACKAGES += telephony-ext
 
