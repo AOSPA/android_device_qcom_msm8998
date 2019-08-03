@@ -24,11 +24,6 @@ endif
 TARGET_KERNEL_VERSION := 4.4
 TARGET_USES_NQ_NFC := true
 
-ifeq ($(TARGET_USES_NQ_NFC),true)
-PRODUCT_COPY_FILES += \
-    device/qcom/common/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
-endif
-
 BOARD_FRP_PARTITION_NAME :=frp
 
 # enable the SVA in UI area
@@ -57,6 +52,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
+
+# QAHW WRAPPER
+PRODUCT_PACKAGES += \
+    libqahw.so \
+    libqahwwrapper.so \
+    hal_play_test \
+    hal_rec_test
 
 TARGET_USES_MKE2FS := true
 #QTIC flag
@@ -87,7 +89,7 @@ PRODUCT_PROPERTY_OVERRIDES  += \
 
 PRODUCT_NAME := msm8998
 PRODUCT_DEVICE := msm8998
-PRODUCT_BRAND := Android
+PRODUCT_BRAND := qti
 PRODUCT_MODEL := MSM8998 for arm64
 
 # Enable features in video HAL that can compile only on this platform
