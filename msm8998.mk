@@ -296,6 +296,9 @@ PRODUCT_PACKAGES += android.hardware.gatekeeper@1.0-impl \
                     android.hardware.keymaster@3.0-service
 endif
 
+# HIDL
+PRODUCT_PACKAGES += android.hidl.base@1.0
+
 PRODUCT_PROPERTY_OVERRIDES += rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
 
 # Kernel modules install path
